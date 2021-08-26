@@ -1,0 +1,24 @@
+package com.BridgeLabz;
+
+public class EmpWage {
+    public static final int IsAbsent = 0;
+    public static final int IsFullTime = 1;
+    public static final int WagePerHr = 20;
+    static int empHrs = 0;
+    public static void main(String[] args) {
+
+        int rndm = (int) Math.floor(Math.random() * 2);
+        if (rndm == 0)
+
+            if (rndm == 0) {
+                System.out.println("Employee is Absent");
+            }else {
+                empHrs = 0;
+            }else {
+                System.out.println("Employee is Present");
+                empHrs = 8;
+            }
+        int dailyWage = WagePerHr*empHrs;
+        System.out.println("Daily wage of Employee is : " + dailyWage);
+    }
+}

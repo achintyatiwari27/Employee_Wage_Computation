@@ -1,0 +1,25 @@
+package com.BridgeLabz;
+
+public class EmpWage {
+    public static final int IsPartTime=2;
+    public static final int IsAbsent = 0;
+    public static final int IsFullTime = 1;
+    public static final int WagePerHr = 20;
+    static int empHrs = 0;
+    public static void main(String[] args) {
+
+        int empchk=(int) Math.floor(Math.random() * 3);
+        switch (empchk) {
+            case IsFullTime:
+                 empHrs = 8;
+                 break;
+            case IsPartTime:
+                 empHrs = 4;
+                 break;
+            default:
+                 empHrs = 0;
+           }
+        int dailyWage = WagePerHr*empHrs;
+        System.out.println("Daily wage of Employee is : " + dailyWage);
+    }
+}

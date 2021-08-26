@@ -1,0 +1,12 @@
+package com.BridgeLabz;
+
+public class EmpWage {
+    public static void main(String[] args) {
+
+        int rndm = (int) Math.floor(Math.random() * 2);
+        if (rndm == 0)
+            System.out.println("Employee is Absent");
+        else
+            System.out.println("Employee is Present");
+    }
+}

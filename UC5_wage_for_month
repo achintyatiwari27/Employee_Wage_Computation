@@ -1,0 +1,33 @@
+package com.BridgeLabz;
+
+public class EmpWage {
+    public static void main(String[] args) {
+        final int wagePrHr = 20;
+        final int is_full_time = 2;
+        final int is_part_time = 1;
+        final int workingDays = 20;
+        int totalWage = 0;
+        for(int day=0; day<=workingDays; day++)
+        {
+            int empchk = (int)Math.floor(Math.random()*3);
+            int workingHr = 0;
+            switch (empchk)
+            {
+                case is_full_time:
+                    System.out.println("Employee is present Full Time");
+                    workingHr = 8;
+                    break;
+                case is_part_time:
+                    System.out.println("Employee is present Part time");
+                    workingHr = 4;
+                    break;
+                default:
+                    System.out.println("Employee is Absent");
+            }
+            int dailyWage = workingHr * wagePrHr;
+            totalWage += dailyWage;
+            System.out.println("Day " + day +" "+ "Wage is :- " + dailyWage);
+            System.out.println("Total wage for a month is :- " + totalWage);
+        }
+    }
+}
